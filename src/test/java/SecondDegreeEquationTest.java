@@ -1,3 +1,4 @@
+import exception.InvalidCoefficientException;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -6,7 +7,7 @@ import static org.junit.Assert.assertThat;
 public class SecondDegreeEquationTest {
     @Test(expected = InvalidCoefficientException.class)
     public void shouldNotAcceptZeroAsTheCoefficentA() throws InvalidCoefficientException {
-        SecondDegreeEquation equation = new SecondDegreeEquation(0.0, 1.0, 2.0);
+        new SecondDegreeEquation(0.0, 1.0, 2.0);
     }
 
     @Test

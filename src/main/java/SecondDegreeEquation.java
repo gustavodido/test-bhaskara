@@ -1,10 +1,12 @@
+import exception.InvalidCoefficientException;
+
 public class SecondDegreeEquation {
 
     private double coefficientA;
     private double coefficientB;
     private double coefficientC;
 
-    public SecondDegreeEquation(double coefficientA, double coefficientB, double coefficientC) throws InvalidCoefficientException {
+    public SecondDegreeEquation(double coefficientA, double coefficientB, double coefficientC) {
         if (coefficientA == 0)
             throw new InvalidCoefficientException("Invalid Coefficient.");
 

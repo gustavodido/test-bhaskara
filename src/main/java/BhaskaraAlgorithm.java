@@ -1,8 +1,10 @@
+import exception.InvalidDeltaException;
+
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
 public class BhaskaraAlgorithm {
-    public SecondDegreeEquationResult resolve(SecondDegreeEquation equation) throws InvalidDeltaException {
+    public SecondDegreeEquationResult resolve(SecondDegreeEquation equation) {
         double delta = computeDelta(equation);
         if (delta <= 0) {
             throw new InvalidDeltaException("Delta must be a positive number.");

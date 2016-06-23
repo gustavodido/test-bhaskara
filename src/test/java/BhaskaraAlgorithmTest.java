@@ -1,3 +1,4 @@
+import exception.InvalidDeltaException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,13 +9,13 @@ public class BhaskaraAlgorithmTest {
 
     private BhaskaraAlgorithm bhaskaraAlgorithm;
 
-       @Before
+    @Before
     public void setUp() {
         bhaskaraAlgorithm = new BhaskaraAlgorithm();
     }
 
     @Test
-    public void shouldCorrectlyResolveEquation() throws InvalidCoefficientException, InvalidDeltaException {
+    public void shouldCorrectlyResolveEquation()  {
         SecondDegreeEquation equation = new SecondDegreeEquation(1, -5, 6);
         SecondDegreeEquationResult result = bhaskaraAlgorithm.resolve(equation);
 
@@ -23,7 +24,7 @@ public class BhaskaraAlgorithmTest {
     }
 
     @Test(expected = InvalidDeltaException.class)
-    public void shouldTestIfDeltaIsPositive() throws InvalidCoefficientException, InvalidDeltaException {
+    public void shouldTestIfDeltaIsPositive()  {
         SecondDegreeEquation equation = new SecondDegreeEquation(2, 1, 2);
         bhaskaraAlgorithm.resolve(equation);
     }
