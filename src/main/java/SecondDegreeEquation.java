@@ -7,8 +7,9 @@ public class SecondDegreeEquation {
     private double coefficientC;
 
     public SecondDegreeEquation(double coefficientA, double coefficientB, double coefficientC) {
-        if (coefficientA == 0)
+        if (coefficientA == 0) {
             throw new InvalidCoefficientException("Invalid Coefficient.");
+        }
 
         this.coefficientA = coefficientA;
         this.coefficientB = coefficientB;
